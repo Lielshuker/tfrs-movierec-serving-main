@@ -1,0 +1,2 @@
+model_checkpoint_path: "retrieval_new"
+all_model_checkpoint_paths: "retrieval_new"

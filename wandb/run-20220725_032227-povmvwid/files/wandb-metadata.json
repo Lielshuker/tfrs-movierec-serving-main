@@ -1,0 +1,19 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.9",
+    "heartbeatAt": "2022-07-25T00:22:31.718660",
+    "startedAt": "2022-07-25T00:22:27.076021",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "run",
+        "--port=8000"
+    ],
+    "state": "running",
+    "codePath": "env\\lib\\site-packages\\flask\\__main__.py",
+    "program": "D:\\Users\\liels\\OneDrive\\Desktop\\tfrs-movierec-serving-main\\env\\lib\\site-packages\\flask\\__main__.py",
+    "host": "DESKTOP-8TH8INN",
+    "username": "liels",
+    "executable": "D:\\Users\\liels\\OneDrive\\Desktop\\tfrs-movierec-serving-main\\env\\Scripts\\python.exe"
+}
