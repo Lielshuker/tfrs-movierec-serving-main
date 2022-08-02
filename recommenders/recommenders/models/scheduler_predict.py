@@ -1,21 +1,13 @@
-import numpy as np
-from typing import Dict, Text
-
-import numpy as np
 import tensorflow as tf
 from pathlib import Path
-import tensorflow_recommenders as tfrs
-import tensorflow_datasets as tfds
-
-from app.models import WatchedMovie, Movie
-
-
 
 # def run(load_model=False):
-from recommenders.models.new_retreival import load_data, build_model, MovielensModel
+# from recommenders.models.new_retreival import load_data, build_model, MovielensModel
 
 
 def job_predict():
+    from recommenders.models.new_retreival import load_data, build_model, MovielensModel
+
     # ratings , train, test, unique_user_ids, unique_movie_titles, movies = load_data()
     # user_model, movie_model, task = build_model(unique_user_ids, unique_movie_titles, movies)
     # model = MovielensModel(user_model, movie_model, task)
