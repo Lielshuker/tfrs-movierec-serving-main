@@ -461,7 +461,7 @@ def load_model(user_id):
     user_model, movie_model, task = build_model(unique_user_ids, unique_movie_titles, movies)
     model = MovielensModel(user_model, movie_model, task)
     model.load_weights(Path(__file__).resolve().parents[1] / 'weights/retrieval_new')
-    index = tfrs.layers.factorized_top_k.BruteForce(model.user_model, k=candidates)
+    index = tfrs.layers.factorized_top_k.BruteForce(model.user_model, k=100)
     index.index_from_dataset(
       tf.data.Dataset.zip((movies.batch(100), movies.batch(100).map(model.movie_model)))
     )
@@ -475,10 +475,11 @@ def load_model(user_id):
 
 def load_data(ratings=None):
     if not ratings:
-        ratings = tfds.load("movielens/latest-small-ratings", split="train")
+        ratings = tfds.load("movielens/latest-small-ratings", split="train",
+                            data_dir='D:\\Users\\liels\\Downloads\\data')
         # Features of all the available movies.
 
-    movies = tfds.load("movielens/latest-small-movies", split="train")
+    movies = tfds.load("movielens/latest-small-movies", split="train",data_dir='D:\\Users\\liels\\Downloads\\data')
 
     ratings = ratings.map(lambda x: {
         "movie_title": x["movie_title"],
